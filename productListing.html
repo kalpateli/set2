@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Product Listing </title>
+
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background:#ffffff url("pencilbg.jpg") no-repeat center 80% fixed;
+
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: hsla(329, 70%, 69%, 0.428);
+            padding:50px 0;
+        }
+
+        .product{
+           display: flex;
+           flex-direction: column;
+           border: 5px solid rgb(131, 62, 168);
+           height: 300px;
+           width:200px;
+           padding:20px;
+
+           margin:0 20px;
+           background-color: rgba(71, 58, 166, 0.5);
+
+        }
+
+        .pName{
+            text-align: center;
+            
+        }
+
+        .pimage{
+            border-width: 5px;
+            border-style: solid;
+            border-color: hsl(324, 84%, 22%);
+            /* width:100px;
+            height:25px; */
+            background-color: #00a2e8;
+            color:white;
+            text-align: center;
+            align-self: center;
+            padding:30px 50px;
+        }
+
+        .pdesc{
+            font-size: medium;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            
+        }
+
+        #product2{
+            margin: 0px 20px 0px 20px;
+
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Product Listing Page</h1>
+
+        <div class="container">
+            <div class="product">
+                <div class="pName">
+                    <h3>Product Name</h3>
+                </div>
+                <div class="pimage">
+                    <span>Backgrounds</span>
+
+                </div>
+                <div class="pdesc">
+                    <p>Short 1 line Product description... </p>
+
+                </div>
+            </div>
+            <div class="product" id="product2">
+                <div class="pName">
+                    <h3>Product Name</h3>
+                </div>
+                <div class="pimage">
+                    <span>Backgrounds</span>
+
+                </div>
+                <div class="pdesc">
+                    <p>Short 1 line Product description... </p>
+
+                </div>
+            </div>            
+            <div class="product">
+                <div class="pName">
+                    <h3>Product Name</h3>
+                </div>
+                <div class="pimage">
+                    <span>Backgrounds</span>
+
+                </div>
+                <div class="pdesc">
+                    <p>Short 1 line Product description... </p>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

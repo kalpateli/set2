@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>set2</title>
+    </head>
+    <body>
+        
+    </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widtd=device-widtd,initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Assignment 1</title>
+</head>
+<style>
+    .solutions {
+        margin-top: 50px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .sol {
+        margin: 20px 100px;
+        background-color: antiquewhite;
+        padding: 20px;
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+
+
+
+
+    a {
+        text-decoration: none;
+    }
+
+    button{
+
+        margin-top:20px;
+        padding:10px;
+        background-color:darksalmon;
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+        font-size: medium;
+        border:transparent solid 2px;
+        
+
+    }
+
+    button:hover{
+        cursor: pointer;
+        background-color: lightcoral;
+        color: white;
+        border:white solid 2px;
+
+    }
+
+
+
+
+</style>
+
+<body>
+    <div class="solutions">
+
+        <div class="sol" >Solution 3
+
+             <p id="str"></p>           
+           
+        </div>
+        <div class="sol">Solution 4
+
+             <p id="str2"></p>
+        </div>
+        <div class="sol">Solution 5
+
+            <p> This is a string : The teacher instructed, “Don't forget to use the backslash (\) in the file path!”. </p>
+
+             <p id="str3"></p>
+        </div>
+        <div class="sol">Solution 6
+
+            <p> If this is a string : In the morning, we say “Good Morning”. </p>
+            <p> After replacing it, we get </p>
+            
+
+             <p id="replace"></p>
+        </div>
+        <div class="sol">Solution 7
+
+            <p> “   Have a great day!   “</p>
+            
+             <p id="circum"></p>
+
+        </div>
+        <div class="sol">Solution 8
+
+            <p>5</p>
+             <p id="str6a"></p>
+             <p id="str6b"></p>
+
+
+        </div>
+        <div class="sol">Solution 9
+
+            <p>Search for characters</p>
+    
+
+           
+
+        </div>
+        <div class="sol">Solution 10
+
+            <p>Have a great day!</p>
+
+            <p id="lower"></p>
+            <p id="upper"></p>
+
+        </div>
+        <div class="sol">Solution 11
+
+            
+             <p id="capital"></p>
+
+        </div>
+        <div class="sol">Solution 12
+
+            
+             <p id="sol12"></p>
+
+        </div>
+        <div class="sol">Solution 13
+
+            <p>"This is a string"</p>
+             <p id="sol13a"></p>
+             <p id="sol13b"></p>
+
+        </div>
+
+        <div class="sol">Solution 14
+
+             <p>"Okay " after using repeat method.</p>
+             <p id="repeat"></p>
+
+        </div>
+    </div>
+
+    <script>
+        //sol 3
+        let str = 'The teacher instructed, "Don\'t forget to use the backslash (\\) in the file path!".';
+        document.getElementById("str").innerHTML = str;
+
+        //sol4
+        let tech1 = 'HTML';
+        let tech2 = 'CSS';
+        let tech3 = 'JavaScript';
+        document.getElementById("str2").innerHTML = "Core frontend technologies are " + tech1 +", " + tech2 +", " + tech3 +".";
+        let str2 = tech1.concat(", ", tech2, ", ", tech3,".");
+        console.log("Core frontend technologies are " + str2);
+
+        //sol 5
+        let str3 = 'The teacher instructed, "Don\'t forget to use the backslash (\\) in the file path!".';
+        //at
+        let ltrfrst = str3.at(0);
+        let ltrlst = str3.at(str3.length - 1);
+        let ltrprt = str3.at(5);
+        console.log(ltrfrst);
+        console.log(ltrlst);
+        console.log(ltrprt);
+        //charat
+        let firstletter = str3.charAt(0);
+        let lastletter = str3.charAt(str3.length - 1);
+        let partletter = str3.charAt(5);
+        console.log(firstletter);
+        console.log(lastletter);
+        console.log(partletter);
+        //substring
+        let firstchar = str3.substring(0,1);
+        let lastchar = str3.substring(str3.length - 1);
+        let partchar = str3.substring(4,8);
+        console.log(firstchar);
+        console.log(lastchar);
+        console.log(partchar);
+        //substr
+        let frstchar = str3.substr(0,1);
+        let lstchar = str3.substr(str3.length - 1);
+        let prtchar = str3.substr(4,1);
+        console.log(frstchar);
+        console.log(lstchar);
+        console.log(prtchar);
+        //slice
+        let frstltr = str3.slice(0,1);
+        let lstltr = str3.slice(str3.length - 1);
+        let prtltr = str3.slice(5,19);
+        console.log(frstltr);
+        console.log(lstltr);
+        console.log(prtltr);
+
+
+        //sol6
+        let str4 = 'In the morning, we say "Good Morning".';
+        let replace = str4.replace("In the morning", "At night").replace("Good Morning", "Good night.");
+        document.getElementById("replace").innerHTML = replace;
+
+
+        //sol7
+        let str5 = '   Have a great day!  ';
+        console.log(str5);
+        //trim
+        let trimmedstr5 = str5.trim();
+        console.log(trimmedstr5);
+        //split
+        let splitstr5 = str5.split(' ');
+        console.log(splitstr5);
+        //replace
+        let replacestr5 = str5.replace(/\s+/g, '');
+        console.log(replacestr5); 
+
+        //sol8
+        let str6 = '5';
+        document.getElementById("str6a").innerHTML = str6.padStart(4,'0');
+        document.getElementById("str6b").innerHTML = str6.padEnd(4,'0');
+
+        //sol9
+        let str7 = 'In the morning, we say "Good Morning".';
+        //endswith
+        console.log(str7.endsWith('Morning".'));
+        //includes
+        console.log(str7.includes('Morning".'));
+        //indexof
+        console.log(str7.indexOf('Morning".'));
+        //lastindexof
+        console.log(str7.lastIndexOf('morning'));
+        //match
+        console.log(str7.match(/say/));
+        //search
+        console.log(str7.search(/say/));
+        //startswith
+        console.log(str7.startsWith('Morning".'));
+
+        //sol10
+        let str8="Have a great day!";
+        document.getElementById("lower").innerHTML = str8.toLowerCase();
+        document.getElementById("upper").innerHTML = str8.toUpperCase();
+
+        //sol 11
+        let str9 = "Uniform Resource Locator";
+        let capitalLtrs = [];
+        for (let i = 0; i < str9.length; i++) 
+        {
+            if (str9[i] >= 'A' && str9[i] <= 'Z') 
+            {
+                capitalLtrs.push(str9.charCodeAt(i));
+            }
+        }
+        console.log(capitalLtrs);
+        let characters = '';
+        for (let i = 0; i< capitalLtrs.length;i++)
+        {
+            let char = String.fromCharCode(capitalLtrs[i]);
+            characters =characters + char;
+        }
+        console.log(characters);
+        document.getElementById("capital").innerHTML = characters;
+
+        
+        //sol12
+        let charA = "A";
+        let chara = "a";
+        let compare = charA.localeCompare(chara);
+        let ans='';
+        if (compare < 0) 
+        {
+             ans = "Character code of 'A' comes before 'a'";
+        } 
+        else if (compare === 0) 
+        {
+             ans = "Character code of 'A' and 'a' are the same";
+        } 
+        else 
+        {
+             ans = "Character code of 'A' comes after 'a'";
+        }
+        document.getElementById("sol12").innerHTML = ans;
+
+
+        //sol13
+        let str10 ="This is a string";
+        //ways to access string : charAt, at, substring,substr, split,slice
+        //ways to display output the entire string 
+        console.log(str10);
+        document.getElementById("sol13a").innerHTML = str10;
+        document.getElementById("sol13a").innerHTML = "This is another string concatenating with " + str10;
+
+
+
+
+        //sol14
+        let str11 = "Okay ";
+        let repeat = str11.repeat(2);
+        document.getElementById("repeat").innerHTML = repeat;
+    </script>
+</body>
+
+</html>
